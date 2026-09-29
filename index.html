@@ -48,8 +48,10 @@ gap: 12px;
 margin-bottom: 24px;
 }
  
-.reason-buttons input[type="radio"] {
-display: none;
+.reason-buttons input[type="radio"\]:checked + .reason {
+background: #0078d7;
+color: white;
+border-color: #0078d7;
 }
  
 .reason {
