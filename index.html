@@ -3,9 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
 <title>Fahrzeugkontakt</title>
  
 <style>
+ 
 * {
 box-sizing: border-box;
 }
@@ -19,19 +21,53 @@ color: #333;
 }
  
 .container {
-max-width: 500px;
+max-width: 550px;
 margin: 0 auto;
-background: #fff;
 padding: 24px;
-border-radius: 12px;
+background: #ffffff;
+border-radius: 15px;
 box-shadow: 0 2px 12px rgba(0,0,0,0.1);
 }
-  CSS
+ 
+h1 {
+text-align: center;
+margin-top: 0;
+}
+ 
+p {
+text-align: center;
+line-height: 1.5;
+font-size: 18px;
+}
+ 
+label {
+display: block;
+margin-top: 20px;
+margin-bottom: 8px;
+font-weight: bold;
+font-size: 18px;
+}
+ 
+textarea,
+input[type="text"] {
+width: 100%;
+padding: 16px;
+border: 1px solid #ccc;
+border-radius: 10px;
+font-size: 18px;
+}
+ 
+textarea {
+min-height: 140px;
+resize: vertical;
+}
+ 
+/* Grund-Auswahl */
+ 
 .reason-buttons {
 display: flex;
 flex-direction: column;
 gap: 12px;
-margin-top: 10px;
 }
  
 .reason-buttons input[type="radio"] {
@@ -41,13 +77,14 @@ display: none;
 .reason {
 display: block;
 padding: 18px;
+border: 2px solid #cccccc;
 border-radius: 12px;
-border: 2px solid #ccc;
-background: #f7f7f7;
+background: #f8f8f8;
+text-align: center;
 font-size: 20px;
 font-weight: bold;
-text-align: center;
 cursor: pointer;
+transition: all 0.2s;
 }
  
 .reason:hover {
@@ -60,132 +97,132 @@ color: white;
 border-color: #0078d7;
 }
  
-h1 {
-text-align: center;
-margin-top: 0;
-}
- 
-p {
-text-align: center;
-line-height: 1.4;
-}
- 
-label {
-display: block;
-margin-top: 16px;
-margin-bottom: 6px;
-font-weight: bold;
-}
- 
-select {
-width: 100%;
-padding: 18px;
-min-height: 60px;
-border: 1px solid #ccc;
-border-radius: 8px;
-font-size: 18px;
-}
- 
-textarea {
-min-height: 120px;
-resize: vertical;
-}
+/* Senden-Button */
  
 button {
 width: 100%;
-padding: 16px;
-margin-top: 24px;
-border: 0;
-border-radius: 8px;
-background: #0078d7;
+min-height: 85px;
+margin-top: 30px;
+border: none;
+border-radius: 14px;
+background: #28a745;
 color: white;
-font-size: 18px;
+font-size: 26px;
 font-weight: bold;
 cursor: pointer;
 }
  
 button:hover {
-background: #005fa3;
-}
 background: #218838;
 }
  
 .info {
-margin-top: 12px;
-font-size: 14px;
-color: #666;
+margin-top: 15px;
 text-align: center;
+color: #666;
+font-size: 14px;
 }
  
 @media (prefers-color-scheme: dark) {
  
 body {
-background: #1a1a1a;
-color: #eee;
+background: #181818;
+color: #f0f0f0;
 }
  
 .container {
 background: #2a2a2a;
 }
  
-select,
 textarea,
-input {
-background: #333;
-color: #fff;
+input[type="text"] {
+background: #3a3a3a;
+color: white;
 border-color: #555;
 }
-}
-</style>
  
+.reason {
+background: #3a3a3a;
+border-color: #555;
+color: white;
+}
+ 
+.reason:hover {
+background: #454545;
+}
+ 
+.info {
+color: #aaa;
+}
+}
+ 
+</style>
 </head>
+ 
 <body>
  
 <div class="container">
  
-<h1><center>Halter von</center></h1>
-<h1><center>🚐 LEO EW700</center></h1>
-<h1><center>kontaktieren</center></h1>
+<h1>🚐 Fahrzeugkontakt</h1>
  
 <p>
 Haben Sie ein Anliegen zu diesem Fahrzeug?<br>
 Bitte beschreiben Sie Ihr Anliegen kurz.
 </p>
  
-<form
-action="https://formspree.io/f/mwlpavol"
-method="POST">
+https://formspree.io/f/DEINE_FORM_ID
  
 <label>Grund</label>
  
 <div class="reason-buttons">
  
-<input type="radio" id="licht" name="Grund"
-value="Licht eingeschaltet" checked>
+<input
+type="radio"
+id="licht"
+name="Grund"
+value="Licht eingeschaltet"
+checked>
+ 
 <label class="reason" for="licht">
 💡 Licht eingeschaltet
 </label>
  
-<input type="radio" id="schaeden" name="Grund"
+<input
+type="radio"
+id="beschaedigt"
+name="Grund"
 value="Fahrzeug beschädigt">
-<label class="reason" for="schaeden">
+ 
+<label class="reason" for="beschaedigt">
 🚗 Fahrzeug beschädigt
 </label>
  
-<input type="radio" id="parken" name="Grund"
+<input
+type="radio"
+id="parkproblem"
+name="Grund"
 value="Parkproblem">
-<label class="reason" for="parken">
+ 
+<label class="reason" for="parkproblem">
 🅿️ Parkproblem
 </label>
  
-<input type="radio" id="unfall" name="Grund"
+<input
+type="radio"
+id="unfall"
+name="Grund"
 value="Unfall / Vorfall">
+ 
 <label class="reason" for="unfall">
 ⚠️ Unfall / Vorfall
 </label>
  
-<input type="radio" id="sonstiges" name="Grund"
+<input
+type="radio"
+id="sonstiges"
+name="Grund"
 value="Sonstiges">
+ 
 <label class="reason" for="sonstiges">
 ℹ️ Sonstiges
 </label>
@@ -200,7 +237,9 @@ name="Nachricht"
 placeholder="Bitte kurz beschreiben..."
 required></textarea>
  
-<label for="kontakt">E-Mail oder Telefon (optional)</label>
+<label for="kontakt">
+E-Mail oder Telefon (optional)
+</label>
  
 <input
 type="text"
@@ -208,20 +247,26 @@ id="kontakt"
 name="Kontakt"
 placeholder="Für Rückfragen">
  
-<!-- GPS-Koordinaten -->
-<input type="hidden" id="gps" name="Standort">
+<!-- GPS-Position -->
+ 
+<input
+type="hidden"
+id="gps"
+name="Standort">
  
 <!-- Spam-Schutz -->
+ 
 <input
 type="text"
 name="_gotcha"
 style="display:none">
  
-<!-- Formspree Einstellungen -->
+<!-- E-Mail-Betreff -->
+ 
 <input
 type="hidden"
 name="_subject"
-value="Neue Nachricht über Fahrzeug-QR-Code">
+value="🚐 Fahrzeugmeldung">
  
 <button type="submit">
 🚐 Fahrzeughalter informieren
@@ -229,22 +274,42 @@ value="Neue Nachricht über Fahrzeug-QR-Code">
  
 </form>
  
+<div class="info">
+Ihre Nachricht wird direkt an den Fahrzeughalter gesendet.
+</div>
+ 
 </div>
  
 <script>
+ 
 if ("geolocation" in navigator) {
+ 
 navigator.geolocation.getCurrentPosition(
+ 
 function(position) {
+ 
 document.getElementById("gps").value =
-position.coords.latitude + ", " +
+position.coords.latitude +
+", " +
 position.coords.longitude;
+ 
 },
+ 
 function(error) {
-console.log("GPS nicht verfügbar:", error.message);
-}
+ 
+console.log(
+"GPS nicht verfügbar:",
+error.message
 );
+ 
 }
+ 
+);
+ 
+}
+ 
 </script>
  
 </body>
+</html>
 </html>
