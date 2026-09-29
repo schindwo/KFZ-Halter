@@ -42,14 +42,13 @@ font-size: 18px;
 /* Gründe */
  
 .reason-buttons {
-display: flex;
-flex-direction: column;
-gap: 16px;
+display: grid;
+gap: 12px;
 margin-bottom: 24px;
 }
  
 .reason-buttons input[type="radio"] {
-display: none;
+display: none !important;
 }
  
 .reason {
@@ -63,7 +62,7 @@ text-align: center;
 font-size: 24px;
 font-weight: bold;
 cursor: pointer;
-user-select: none;
+margin: 0;
 }
  
 .reason-buttons input[type="radio"\]:checked + .reason {
