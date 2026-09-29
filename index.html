@@ -44,7 +44,7 @@ font-size: 18px;
 .reason-buttons {
 display: flex;
 flex-direction: column;
-gap: 12px;
+gap: 16px;
 margin-bottom: 24px;
 }
  
@@ -55,22 +55,18 @@ display: none;
 .reason {
 display: block;
 width: 100%;
-padding: 22px;
-border: 2px solid #d0d0d0;
-border-radius: 12px;
-background: #fafafa;
+padding: 24px;
+background: #f8f8f8;
+border: 2px solid #cccccc;
+border-radius: 16px;
 text-align: center;
-font-size: 22px;
+font-size: 24px;
 font-weight: bold;
 cursor: pointer;
-transition: all 0.2s ease;
+user-select: none;
 }
  
-.reason:hover {
-background: #eef6ff;
-}
- 
-.reason-buttons input[type="radio"]:checked + .reason {
+.reason-buttons input[type="radio"\]:checked + .reason {
 background: #0078d7;
 color: white;
 border-color: #0078d7;
