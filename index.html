@@ -101,19 +101,26 @@ border-color: #0078d7;
  
 button {
 width: 100%;
-min-height: 85px;
+min-height: 110px;
+padding: 25px;
 margin-top: 30px;
-border: none;
-border-radius: 14px;
+border: 2px solid #28a745;
+border-radius: 12px;
 background: #28a745;
 color: white;
-font-size: 26px;
+font-size: 28px;
 font-weight: bold;
 cursor: pointer;
+transition: all 0.2s ease;
 }
  
 button:hover {
 background: #218838;
+border-color: #218838;
+}
+ 
+button:active {
+transform: scale(0.98);
 }
  
 .info {
