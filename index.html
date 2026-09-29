@@ -48,30 +48,29 @@ gap: 12px;
 margin-bottom: 24px;
 }
  
-.reason-buttons input[type="radio"]:checked + .reason {
-background: #0078d7;
-color: white;
-border-color: #0078d7;
+.reason-buttons input[type="radio"] {
+display: none;
 }
  
 .reason {
 display: block;
 width: 100%;
-padding: 25px;
+padding: 22px;
 border: 2px solid #d0d0d0;
-border-radius: 14px;
-background: #f8f8f8;
+border-radius: 12px;
+background: #fafafa;
 text-align: center;
-font-size: 24px;
+font-size: 22px;
 font-weight: bold;
 cursor: pointer;
+transition: all 0.2s ease;
 }
  
 .reason:hover {
 background: #eef6ff;
 }
  
-.reason-buttons input[type="radio"]:checked + .reason {
+.reason-buttons input[type="radio"\]:checked + .reason {
 background: #0078d7;
 color: white;
 border-color: #0078d7;
