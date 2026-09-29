@@ -91,7 +91,7 @@ transition: all 0.2s;
 background: #eef6ff;
 }
  
-.reason-buttons input[type="radio"]:checked + .reason {
+.reason-buttons input[type="radio"\]:checked + .reason {
 background: #0078d7;
 color: white;
 border-color: #0078d7;
@@ -170,7 +170,7 @@ Haben Sie ein Anliegen zu diesem Fahrzeug?<br>
 Bitte beschreiben Sie Ihr Anliegen kurz.
 </p>
  
-https://formspree.io/f/mwlpavol
+https://formspree.io/f/DEINE_FORM_ID
  
 <label>Grund</label>
  
@@ -247,21 +247,15 @@ id="kontakt"
 name="Kontakt"
 placeholder="Für Rückfragen">
  
-<!-- GPS-Position -->
- 
 <input
 type="hidden"
 id="gps"
 name="Standort">
  
-<!-- Spam-Schutz -->
- 
 <input
 type="text"
 name="_gotcha"
 style="display:none">
- 
-<!-- E-Mail-Betreff -->
  
 <input
 type="hidden"
@@ -278,7 +272,7 @@ value="🚐 Fahrzeugmeldung">
 Ihre Nachricht wird direkt an den Fahrzeughalter gesendet.
 </div>
  
-</div>
+<div>
  
 <script>
  
@@ -312,4 +306,4 @@ error.message
  
 </body>
 </html>
-</html>
+ 
